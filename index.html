@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Toward Generation of Test Cases from Task Descriptions via History-aware Planning."/>
+        <meta name="keywords" content="HxAgent"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Toward Generation of Test Cases from Task Descriptions via History-aware Planning
+    </title>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet"/>
+        <link rel="stylesheet" href="./static/css/bulma.min.css"/>
+        <link rel="stylesheet" href="./static/css/bulma-carousel.min.css"/>
+        <link rel="stylesheet" href="./static/css/bulma-slider.min.css"/>
+        <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"/>
+        <link rel="stylesheet" href="./static/css/index.css"/>
+        <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="./static/js/fontawesome.all.min.js"></script>
+        <script src="./static/js/bulma-carousel.min.js"></script>
+        <script src="./static/js/bulma-slider.min.js"></script>
+        <script src="./static/js/index.js"></script>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container is-max-desktop">
+                    <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <h1 class="title is-1 publication-title">Toward Generation of Test Cases from Task Descriptions via History-aware Planning
+              </h1>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <a href="https://shuyanzhou.github.io/">Duy Cao</a>
+                                    <sup>1,3*</sup>
+                                    ,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://frankxfz.me/">Phu Nguyen</a>
+                                    <sup>1,3*</sup>
+                                    ,
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://www.zhuhao.me/">Vy Le</a>
+                                    <sup>2,3*</sup>
+                                    ,
+                
+                                </span>
+                                <br/>
+                                <span class="author-block">
+                                    <a href="https://xuhuiz.com/">Tien N. Nguyen</a>
+                                    <sup>4</sup>
+                                    ,
+                
+                                </span>
+                                <span class="author-block">
+                                    <a href="https://robertlo.tech/">Vu Nguyen</a>
+                                    <sup>1,3,5</sup>
+                                    .
+                
+                                </span>
+                            </div>
+                            <div class="is-size-5 publication-authors">
+                                <span class="author-block">
+                                    <sup>1</sup>
+                                    Faculty of Information Technology, University of Science, Ho Chi Minh city, Vietnam
+                                </span>
+                                <span class="author-block">
+                                    <sup>2</sup>
+                                    Faculty of Computer Science, University of Information Technology, Ho Chi Minh city, Vietnam
+                                </span>
+                                <span class="author-block">
+                                    <sup>3</sup>
+                                    Vietnam National University, Ho Chi Minh city, Vietnam
+                                </span>
+                                <span class="author-block">
+                                    <sup>4</sup>
+                                    Computer Science Department, University of Texas at Dallas, Dallas, Texas, USA,
+                                </span>
+                                <span class="author-block">
+                                    <sup>5</sup>
+                                    Katalon Inc., Vietnam
+                                </span>
+                                <br/>
+                                <!-- <span class="author-block">
+                                    <sup>*</sup>
+                                    Lead contributors.
+                                </span> -->
+                                <span class="author-block">
+                                    <sup>*</sup>
+                                    Equal contribution.
+                                </span>
+                                <br/>
+                                <span class="author-block">{ctduy20,npphu20}@apcs.edu.vn</span>
+                                <br/>
+                                <span class="author-block">tien.n.nguyen@utdallas.edu</span>
+                                <br/>
+                                <span class="author-block">nvu@fit.hcmus.edu.vn</span>
+                            </div>
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <!-- PDF Link. -->
+                                    <span class="link-block">
+                                        <a href="https://arxiv.org/pdf/2307.13854.pdf" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>arXiv (soon)</span>
+                                        </a>
+                                    </span>
+                                    <span class="link-block">
+                                        <a href="https://github.com/web-arena-x/webarena" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fab fa-github"></i>
+                                            </span>
+                                            <span>Code (soon)</span>
+                                        </a>
+                                    </span>
+                                    <!-- Dataset Link. -->
+                                    <span class="link-block">
+                                        <a href="https://github.com/web-arena-x/webarena/blob/main/config_files/test.raw.json" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="far fa-images"></i>
+                                            </span>
+                                            <span>Dataset</span>
+                                        </a>
+                                    </span>
+                                    <!-- Code Link. -->
+                                    <!-- <span class="link-block">
+                                        <a href="https://github.com/web-arena-x/webarena/tree/main/environment_docker" class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-desktop"></i>
+                                            </span>
+                                            <span>Docker Environment</span>
+                                        </a>
+                                    </span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hero teaser">
+            <div class="container is-max-desktop">
+                <div class="hero-body">
+                    <div class="columns is-centered has-text-centered">
+                        <h2 class="title is-3">Abstract</h2>
+                    </div>
+                    <h2 class="subtitle has-text-centered">In automated web testing, generating test scripts from natural language task
+                        descriptions is crucial for enhancing the test generation process. This activity 
+                        involves creating the correct sequences of actions to form test scripts for
+                        future testing activities. Current state-of-the-art approaches are limited in
+                        generating these action sequences, as they either demand substantial manual
+                        effort for human demonstrations or fail to consider the history of previous
+                        web content and actions to decide the next action. In this paper, we introduce 
+                        HxAgent, an iterative large language model agent planning approach
+                        that determines the next action based on: 1. observations of the current contents 
+                        and feasible actions, 2. short-term memory of previous web states and
+                        actions, and 3. long-term experience with (in)correct action sequences. The
+                        agent generates a sequence of actions to perform a given task, which is effectively 
+                        an automated test case to verify the task.
+          </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Overview</h2>
+                        <img src="./static/images/overview.png" style="padding-bottom: 2em;"/>
+                        <div class="content has-text-justified">
+                            <p>TBD.
+                  </p>
+                        </div>
+                        <!-- <img src="./static/images/failed.png" /> -->
+                        <!--  -->
+                        <!-- <div class="content has-text-justified"> -->
+                        <!-- <p> -->
+                        <!-- Two examples where the GPT-4 agent failed, along with their -->
+                        <!-- screenshot and the accessibility tree of the relevant -->
+                        <!-- sections (grey). On the left, the agent fails to proceed to -->
+                        <!-- the “Users” section; on the right, the agent repeats -->
+                        <!-- entering the same search query. -->
+                        <!-- </p> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">HxAgent Generation Demos</h2>
+                    </div>
+                </div>
+                <div class="content has-text-centered">
+                    <p>The videos demonstrate various tasks that can be performed by HxAgent on MiniWoB++ and Realworld Dataset.</p>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="content">
+                            <h2 class="title is-3">Agent on MiniWoB++</h2>
+                            <video id="dollyzoom" controls muted loop playsinline height="100%">
+                                <source src="./static/videos/agent_gitlab.mp4" type="video/mp4"/>
+                            </video>
+                            <div class="content has-text-justified">
+                                <p>"Set up a new, empty repository with the name awesome_llm_reading"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="columns is-centered">
+                            <div class="column content">
+                                <h2 class="title is-3">Agent on Realworld Website</h2>
+                                <video id="matting-video" controls muted loop playsinline height="100%">
+                                    <source src="./static/videos/agent_shop.mp4" type="video/mp4"/>
+                                </video>
+                                <div class="content has-text-justified">
+                                    <p>"Tell me the status of my latest order and when will it arrive" </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" , id="try-it-yourself">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column">
+                        <h2 class="title is-3">Try it yourself:</h2>
+                        <div class="content has-text-justified">
+                            <div class="column has-text-centered">
+                                <div class="publication-links">
+                                    <span class="link-block">
+                                        <a href="http://ec2-3-131-244-37.us-east-2.compute.amazonaws.com:9999/forums/all" class="external-link button is-normal is-rounded is-dark">
+                                            <span>Demo App</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container is-max-desktop">
+                <section class="section">
+                    <div class="container is-max-desktop">
+                        <div class="columns is-centered has-text-centered">
+                            <div class="column is-four-fifths">
+                                <h2 class="title is-3">Realistic Tasks on HxAgent</h2>
+                                <img src="./static/images/tasks.png"/>
+                                <div class="content has-text-justified">
+                                    <p>TBD.
+                  </p>
+                                </div>
+                                <div class="card mb-4 mt-4 text-dark bg-light"></div>
+                                <h3 class="title is-4">List of Tasks</h3>
+                                <div class="select is-multiple">
+                                    <select multiple size="8">
+                                        <a class="panel-block">
+                                            <span class="panel-icon">
+                                                <i class="fas fa-book" aria-hidden="true"></i>
+                                            </span>
+                                            Login to the Facebook with username "ABC" and password "123456"
+                                        </a>
+                                        <option value="">Login to the Facebook with username "ABC" and password "123456"</option>
+                                        <a class="panel-block">
+                                            <span class="panel-icon">
+                                                <i class="fas fa-book" aria-hidden="true"></i>
+                                            </span>
+                                            Search for the term "funny cat" on Youtube and like the first video
+                                        </a>
+                                        <option value="">Search for the term "funny cat" on Youtube and like the first video</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+    
+        <section class="section">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+                        <h2 class="title is-3">Results</h2>
+                        <img src="./static/images/evaluation.png"/>
+                        <div class="content has-text-justified">
+                            <p>TBD.
+                  </p>
+                        </div>
+                        <!-- <img src="./static/images/failed.png" /> -->
+                        <!--  -->
+                        <!-- <div class="content has-text-justified"> -->
+                        <!-- <p> -->
+                        <!-- Two examples where the GPT-4 agent failed, along with their -->
+                        <!-- screenshot and the accessibility tree of the relevant -->
+                        <!-- sections (grey). On the left, the agent fails to proceed to -->
+                        <!-- the “Users” section; on the right, the agent repeats -->
+                        <!-- entering the same search query. -->
+                        <!-- </p> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</div></section>
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre>
+            <code>@article{cao2025hxagent,
+  title={HxAgent: Toward Generation of Test Cases from Task Descriptions via History-aware Planning},
+  author={Cao, Duy and Nguyen, Phu and Le, Vy and Nguyen, Tien N and Nguyen, Vu},
+  journal={arXiv preprint soon},
+  url={https://tbd},
+  year={2025}
+}</code>
+        </pre>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This website is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a>
+                        .
+              
+                    </p>
+                    <p>
+                        This means you are free to borrow the
+                <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
+                        of this website, we just ask that you link back to this page in
+                the footer. Please remember to remove the analytics code
+                included in the header of the website which you do not want on
+                your website.
+              
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body></html>
